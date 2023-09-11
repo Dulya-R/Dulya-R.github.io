@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="site.webmanifest"/>
+    <title>Lavender Garden</title>
+    <link rel= "stylesheet" href="global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,400;1,500&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css>
+    <body>
+   
+    
+
+        <div class="container-bookings">
+            <section class="header">
+                <nav>
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Logo">
+                    </a>
+                    <div class="nav-links" id="navLinks">
+                        <i class="fas fa-times close-button" onclick="hideMenu()"></i>
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="hotels.html">HOTELS</a>
+                            <li><a href="adventures.html">ADVENTURES</a></li>
+                            <li><a href="restaurants.html">RESTAURANTS</a></li>
+                            <li><a href="events.html">EVENTS</a>
+                                <ul class="sub-menu">
+                                    <li><a href="event1.html">WEDDINGS</a></li>
+                                    <li><a href="event2.html">MEETINGS</a></li>
+                                </ul>
+                            </li>
+
+                            
+                            <div class="book-button-container">
+                         
+                            <li><button class="book-button"><a href="bookings.html">BOOK NOW</a></button>
+                                <ul class="sub-menu">
+                                    <li><a href="bookings1.html">HOTELS</a></li>
+                                    <li><a href="bookings2.html">ADVENTURES</a></li>
+                                </ul>
+                                
+                            </li>
+                            </div>
+                        </ul>
+                        
+                        
+                    </div>
+                    <i class="fas fa-bars hamburger" onclick="showMenu()"></i>
+                </nav>    
+            </section>
+
+        </div>
+<!--introduction-->
+        <div class="border-container">
+            <section class="intro">
+                <h1>Book Your Stay</h1>
+               
+                <p>Uncover the ideal fusion of lavish hotels and exhilarating escapades when reserving your stay with us.
+                     Revel in unmatched comfort within our lodgings while embarking on exhilarating adventures that craft indelible moments.</p>
+            </section>
+        </div>
+<!--booking links-->
+        <div class="image-container">
+            <div class="image-box">
+              <img src="images/bookings1-link.jpg" alt="Event 1">
+              <div class="image-overlay">
+                <p>Hotels</p>
+              <button class="event-link-button"><a href="bookings1.html">Book Now</a></button>
+              </div>
+            </div>
+            <div class="image-box">
+              <img src="images/bookings2-link.jpg" alt="Event 2">
+              <div class="image-overlay">
+                <p>Adventures</p>
+                <button class="event-link-button"><a href="bookings2.html">Book Now</a></button>
+            </div>
+            </div>
+          </div>
+       
+
+ <!--footer-->      
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <img src="images/logo-footer.png" alt="Logo Footer"   class="logo-footer">
+                    <p>Your refuge of luxury and comfort, Lavender Garden Hotels is waiting to envelop you at every step.<br>
+                       Our goal at Lavender Garden is to create an exceptional, life-changing experience that expertly combines the genuine warmth of Sri Lankan hospitality with top-notch service.<br>
+                       Thank you for choosing us.
+
+                    </p>
+                </div>
+                <div class="col">
+                    <h3>Contact Us</h3>
+                    <p>Satoru Hotel Managements (Pvt) Ltd.</p>
+                    <p>Level 5, Lotus Tower II, </p>
+                    <p>45 Gojo Street, Colombo 7, Sri Lanka.</p>
+                    <p class="email-id">info@lavenderghotels.com</p>
+                    <h4>+94 - 0123456789</h4>
+                </div>
+                <div class="col">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Features</a></li>
+                        <li><a href="">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Subscribe</h3>
+                    <form>
+                        <i class="far fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email " required>
+                        <button type="submit">SUBMIT</button>
+
+                    </form>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-youtube"></i>
+
+                    </div>
+                </div>
+                
+            </div>
+            <hr> 
+            <p class="copyright"> All Copyrights Reserved By Satoru Hotel Management - © 2023</p>   
+                    
+        </footer>
+
+         
+
+
+        
+
+
+    <!--javascript-->
+    
+        <script>
+
+                        
+            const navLinks = document.getElementById("navLinks");
+            const closeButton = document.querySelector(".close-button");
+            const hamburger = document.querySelector(".hamburger");
+            
+            
+            function showMenu() {
+              navLinks.classList.add("active");
+              closeButton.style.display = "block";
+              hamburger.style.display = "none";
+            }
+            
+            
+            function hideMenu() {
+              navLinks.classList.remove("active");
+              closeButton.style.display = "none";
+              hamburger.style.display = "block";
+            }
+            
+            
+            hamburger.addEventListener("click", showMenu);
+            
+            closeButton.addEventListener("click", hideMenu);
+            
+            
+           
+    
+            function toggleSubMenu(event) {
+            const subMenu = event.target.nextElementSibling; 
+            if (subMenu) {
+                subMenu.classList.toggle("active");
+            }
+            }
+    
+            const parentMenuItems = document.querySelectorAll(".nav-links ul li");
+            parentMenuItems.forEach((item) => {
+            item.addEventListener("click", toggleSubMenu);
+            });
+            
+            </script>   
+            </body>
+            </html>
+            
+    
+    
+       
