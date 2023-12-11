@@ -1,0 +1,57 @@
+body {
+  background-color: #f5f0fa;
+}
+
+.custom-bg {
+  background-image: url("images/custom-bg.jpg");
+}
+
+.nav-tabs .nav-item .nav-link {
+  font-size: large;
+  color: #4d2b4d;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+  background-color: #703ba9;
+  color: #fff;
+}
+
+.btn {
+  background-color: #8b5bbe;
+  border-color: #a084d5;
+  border-width: 3px;
+}
+
+.btn:hover {
+  background-color: #6a419b;
+  border-color: #8b5bbe;
+}
+
+.table thead th {
+  background-color: #a084d5;
+  color: #fff;
+}
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after {
+  position: relative;
+}
+.adventures-box {
+  background-color: #add8e6;
+  border: 1px solid #c5cae9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.adventures-box h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.adventures-description {
+  color: #495057;
+  font-family: "popins", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
